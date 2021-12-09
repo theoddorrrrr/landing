@@ -1,16 +1,22 @@
 body {
-    background: yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: yellow;
+  min-height: 100vh;
 }
 
-::placeholder {
-    color: gray;
-  }
-  
-.image {
-background-image: url(image@1x.png);
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  background: $color;
+  border-radius: 50%;
 }
-@media (min-resolution: 2dppx) {
-.image {
-    background-image: url(image@2x.png);
-}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include circle(50px, black);
 }
