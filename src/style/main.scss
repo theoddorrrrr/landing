@@ -1,22 +1,15 @@
-body {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  background: yellow;
-  min-height: 100vh;
-}
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/normalize.scss/normalize";
 
-@mixin circle($width, $color) {
-  width: $width;
-  height: $width;
-  background: $color;
-  border-radius: 50%;
-}
+@import "./global/fonts.scss";
+@import "./global/vars.scss";
+@import "./global/base.scss";
+@import "./global/common.scss";
+@import "./global/sprite.scss";
+@import "./global/button.scss";
 
-.circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include circle(50px, black);
-}
+
+
+@import "./sections/header.scss";
+@import "./sections/nav.scss";
+

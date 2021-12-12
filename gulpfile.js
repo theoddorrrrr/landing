@@ -34,7 +34,7 @@ gulp.task('template:compile', buildHTML => {
 gulp.task('sass', () => {
     return gulp.src('src/style/main.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'})
+        .pipe(sass()
             .on('error', sass.logError))
 		.pipe(autoprefixer({
 			cascade: false
@@ -65,7 +65,7 @@ gulp.task('clean', function del(cb) {
 //Copy fonts
 gulp.task('copy:font', function() {
     return gulp.src('./src/fonts/**/*.*')
-        .pipe(gulp.dest('build/font'));
+        .pipe(gulp.dest('build/fonts'));
 });
 
 //Copy images
@@ -86,7 +86,6 @@ gulp.task('watch', function() {
 gulp.task('default', gulp.series(
     'clean',
     gulp.parallel('template:compile', 'sass', 'sprite', 'copy'),
-    // gulp.task('autoprefixer'),
     gulp.parallel('watch', 'server')
     )
 );
