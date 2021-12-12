@@ -1,2 +1,20 @@
-footer 
-    h4 Footer
+-   var linkItems = ['facebook-official', 'twitter', 'google-plus', 'linkedin']
+-   var linkUrls = ['facebook.com', 'twitter.com', 'google.com', 'linkedin.com']
+
+footer.footer 
+    .footer__top  
+        .container 
+            .footer__title Get in touch
+            .footer__links
+                each item, key in linkItems
+                    a.footer__social(href='http://' + linkUrls[key] targer="_blank") 
+                        i(class='fa fa-' + item aria-hidden="true")
+
+            .footer__text. 
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum necessitatibus sed quas aliquam voluptate? Fugiat?
+            form(action='#' method='post')
+                .footer__field: input.footer__input(type="email" placeholder="Email Address")
+                button(type='submit').button Subscribe
+
+    .footer__bottom 
+        .footer__copy GitHub.com &copy; 2021 All Rights Reserved
