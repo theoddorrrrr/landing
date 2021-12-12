@@ -2,16 +2,33 @@
     padding: 99px 0 105px 0;
     text-align: center;
 
+    @media (max-width: 960px) {
+        padding: 40px 0 20px 0;
+    }
+
     &__list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         margin: 0;
         padding: 0 50px;
+
+        @media (max-width: 960px) {
+            justify-content: center;
+            gap: 15px;
+        }
     }
 
     &__item {
         width: 25%;
+
+        @media (max-width: 960px) {
+            width: 40%;  
+        }
+
+        @media (max-width: 600px) {
+            width: 80%;
+        }
     }
 
     &__header {

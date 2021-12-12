@@ -3,6 +3,10 @@
     color: #fff;
     background-color: #1287bf;
 
+    @media (max-width: 810px) {
+        padding: 50px 0;
+    }
+
     .title {
         margin-bottom: 12px;
     }
@@ -43,6 +47,11 @@
     color: #828282;
     text-align: center;
     background-color: #fff;
+
+    @media (max-width: 810px) {
+        width: 90%;
+        padding: 25px;
+    }
 
     &__container {
         padding-top: 30px;
@@ -94,6 +103,10 @@
         border: 1px solid #d8d8d8;
         border-radius: 3px;
         font-size: 0.875em;
+
+        &::placeholder {
+            text-align: center;
+        }
 
         &:focus {
             box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
