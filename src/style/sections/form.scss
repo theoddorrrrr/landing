@@ -64,6 +64,7 @@
         border: 30px solid transparent;
         border-bottom: 30px solid #fff;
         top: -59px;
+        pointer-events: none;
     }
 
     &__close-button {
@@ -117,4 +118,8 @@
         padding: 15px 30px;
         border: none;
     }
+}
+
+.btn-down {
+    cursor: pointer;
 }
